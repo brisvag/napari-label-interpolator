@@ -3,7 +3,7 @@ display_name: napari label interpolator
 contributions:
   commands:
     - id: napari-label-interpolator.make_widget
-      python_name: napari_label_interpolator.interpolator_widget:interpolate
+      python_name: napari_label_interpolator.interpolator:interpolate
       title: Make interpolator widget
   widgets:
     - command: napari-label-interpolator.make_widget
