@@ -140,4 +140,4 @@ cython_debug/
 ####################
 
 # setuptools_scm version
-napari_label_interpolator/_version.py
+_version.py
