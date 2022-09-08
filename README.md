@@ -11,7 +11,7 @@ A napari plugin to interpolate any number of (n-1)d-labels across a single dimen
 
 To use, simply label a few slices along the desired dimension, then use the widget to interpolate along the desired axis.
 
-![https://user-images.githubusercontent.com/23482191/189153632-40ef38b7-be89-40b3-b583-b17f3241c67b.png]()
+![](https://user-images.githubusercontent.com/23482191/189153632-40ef38b7-be89-40b3-b583-b17f3241c67b.png)
 
 ----------------------------------
 
