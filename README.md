@@ -7,7 +7,7 @@
 [![codecov](https://codecov.io/gh/brisvag/napari-label-interpolator/branch/main/graph/badge.svg)](https://codecov.io/gh/brisvag/napari-label-interpolator)
 [![napari hub](https://img.shields.io/endpoint?url=https://api.napari-hub.org/shields/napari-label-interpolator)](https://napari-hub.org/plugins/napari-label-interpolator)
 
-A napari plugin to interpolate any number of (n-1)d-labels across a single dimension.
+A napari plugin to interpolate any number of nd-labels across a single dimension.
 
 To use, simply label a few slices along the desired dimension, then use the widget to interpolate along the desired axis.
 
