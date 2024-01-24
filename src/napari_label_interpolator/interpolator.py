@@ -42,11 +42,11 @@ def interpolate_sdf(labels_data, background=0, axis=0):
     labeled_slices_ordered = list(dists)
     previous_labels = {}
     next_labels = {}
-    for z_idx, z_slice in enumerate(result):
+    for z_idx, _ in enumerate(result):
         # set up new interpolations if needed
         if z_idx in dists:
             # ensure we update but keep old ones missing from this slice
-            previous_labels.update({k: z_idx for k in dists[z_idx].keys()})
+            previous_labels.update({k: z_idx for k in dists[z_idx]})
             # ensure we have a next label for each previous
             for label in list(previous_labels):
                 next_index = labeled_slices_ordered.index(z_idx) + 1
