@@ -13,8 +13,10 @@ if TYPE_CHECKING:
 try:
     from dask.array import compute
 except ModuleNotFoundError:
+
     def compute(arr):
         return [arr]
+
 
 def interpolate_sdf(labels_data, background=0, axis=0):
     """
