@@ -1,27 +1,27 @@
 repos:
--   repo: https://github.com/pycqa/isort
-    rev: 5.13.2
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
     hooks:
-    - id: isort
--   repo: https://github.com/psf/black
+      - id: check-docstring-first
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+        exclude: ^\.napari-hub/.*
+      - id: check-yaml # checks for correct yaml syntax for github actions ex.
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.1.14
+    hooks:
+      - id: ruff
+  - repo: https://github.com/psf/black
     rev: 23.12.1
     hooks:
-    - id: black
-      pass_filenames: true
--   repo: https://github.com/PyCQA/flake8
-    rev: 7.0.0
+      - id: black
+  - repo: https://github.com/tlambert03/napari-plugin-checks
+    rev: v0.3.0
     hooks:
-    - id: flake8
-      additional_dependencies: [flake8-typing-imports==1.11.0]
-      pass_filenames: true
--   repo: https://github.com/asottile/pyupgrade
-    rev: v3.15.0
-    hooks:
-    - id: pyupgrade
-      args: ["--py38-plus", "--keep-runtime-typing"]
--   repo: https://github.com/seddonym/import-linter
-    rev: v2.0
-    hooks:
-    - id: import-linter
-      stages: [manual]
-
+      - id: napari-plugin-checks
+  # https://mypy.readthedocs.io/en/stable/introduction.html
+  # you may wish to add this as well!
+  # - repo: https://github.com/pre-commit/mirrors-mypy
+  #   rev: v0.910-1
+  #   hooks:
+  #     - id: mypy

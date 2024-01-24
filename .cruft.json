@@ -1,0 +1,26 @@
+{
+  "template": "https://github.com/napari/cookiecutter-napari-plugin",
+  "commit": "350abd8d3af991fc0313a36fb46147373180e28b",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "full_name": "Lorenzo Gaifas",
+      "email": "brisvag@gmail.com",
+      "github_username_or_organization": "brisvag",
+      "plugin_name": "napari-label-interpolator",
+      "github_repository_url": "https://github.com/brisvag/napari-label-interpolator",
+      "module_name": "napari_label_interpolator",
+      "display_name": "Label Interpolator",
+      "short_description": "A napari plugin to interpolate any number of nd-labels across a single dimension.",
+      "include_reader_plugin": "n",
+      "include_writer_plugin": "n",
+      "include_sample_data_plugin": "n",
+      "include_widget_plugin": "n",
+      "use_git_tags_for_versioning": "y",
+      "install_precommit": "y",
+      "license": "GNU GPL v3.0",
+      "_template": "https://github.com/napari/cookiecutter-napari-plugin"
+    }
+  },
+  "directory": null
+}
