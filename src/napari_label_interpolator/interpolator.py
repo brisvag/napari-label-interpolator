@@ -10,6 +10,11 @@ from magicgui import magic_factory
 if TYPE_CHECKING:
     import napari
 
+try:
+    from dask.array import compute
+except ModuleNotFoundError:
+    def compute(arr):
+        return [arr]
 
 def interpolate_sdf(labels_data, background=0, axis=0):
     """
@@ -78,8 +83,8 @@ def interpolate(
     """
     return (
         interpolate_sdf(
-            labels.data, background=labels._background_label, axis=axis
+            compute(labels.data)[0], background=labels.colormap.background_value, axis=axis
         ),
-        {"name": "{labels} - interpolated", "scale": labels.scale},
+        {"name": f"{labels.name} - interpolated", "scale": labels.scale},
         "labels",
     )
